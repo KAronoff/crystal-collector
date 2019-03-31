@@ -6,32 +6,125 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
-<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style.css">
 <title>Cat Collector Game</title>
 </head>
 <body>
 <!-- whole page container to be centered -->
-<!-- create row 1 of whole page -->
-  <!-- col in row 1 whole page spanning col-12 -->
-    <!-- banner displaying game name -->
-<!-- create row 2 of whole page-->
-  <!-- create 2 colums, left column col-8 right column col-4 -->
-    <!-- col-8 (left col)-->
+<div class="container mx-auto">
+  <!-- create row 1 of whole page -->
+  <div class="row">
+    <!-- col in row 1 whole page spanning col-12 -->
+    <div class="col-12 col-md-12">
+      <!-- banner displaying game name -->
+      <h1 class="text-center">
+        Cat Collector Game
+      </h1>
+    </div>
+  </div>
+  <!-- create row 2 of whole page-->
+  <div class="row">
+    <!-- create 2 colums, left column col-8 right column col-4 -->
+    <!-- start left col-8 -->
+    <div class="col-12 col-md-8">
+      <!-- col-8 (left col)-->
       <!-- create 2 rows of left col -->
-        <!-- row 1 of left col -->
-          <!-- col-3 holding image and current score -->
-            <!-- image on left (to show the most recently clicked image) -->
-          <!-- col-9 to hold the current score -->
-        <!-- row 2 of left col -->
-    <!-- col-4, right col -->
-      <!-- row 1 of right col-->
-        <!-- container in row 1 of right col holding current score -->
-      <!-- row 2 of right col -->
-        <!-- container in row 2 of right col to hold total wins/losses, and total score of all games -->
-      <!-- row 3 -->
-        <!-- container in row 3 in right col to hold buttons -->
-          <!-- start game button, to turn into a "new round" button -->
-          <!-- reset game button -->
+      <!-- start row 1 inside left col to hold the instructions-->
+      <div class="row">
+        <div class="container">
+          <!-- instructions go here -->
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed accusantium consequuntur vero perspiciatis nihil quam odit ipsum cumque nam quod, facere suscipit aliquid incidunt, consequatur error optio minima corrupti. Minus?
+          </p>
+        </div>
+      </div>
+      <!-- start row 2 inside left col will contain score, and choices -->
+      <div class="row">
+        <!-- left col in row 1 left col to hold the current score and recent image choice -->
+        <div class="row">
+            <div class="col-3 col-md-3">
+                <div class="container">
+                  <!-- recent choice image container-->
+                </div>
+                <!-- right col-9 in row 1 left col -->
+              <div class="col-9 col-md-9">
+                <div class="container">
+                  <p class="display-3">
+                    <!-- current score -->
+                    SCORE
+                  </p>
+                </div>
+              </div>
+            </div>
+        </div> 
+        <!-- start choices of 4 images -->
+        <div class="row">
+          <div class="col-3 col-md-3">
+            <!-- image 1 -->
+              <div class="container choiceImage">
+                <img class="catChoice" src="assets/images/brown-white-cat-profile.jpg">
+              </div>
+          </div>
+          <div class="col-3 col-md-3">
+            <!-- image 2 -->
+            <div class="container choiceImage">
+              <img class="catChoice" src="assets/images/grey-tabby-kitten.jpg">
+            </div>
+          </div>
+          <div class="col-3 col-md-3">
+            <!-- image 3 -->
+            <div class="container choiceImage">
+              <img class="catChoice" src="assets/images/grey-whie-cat-profile.jpg">
+            </div> 
+          </div>
+          <div class="col-3 col-md-3">
+            <!-- image 4 -->
+            <div class="container choiceImage">
+              <img class="catChoice" src="assets/images/multi-color-cat-eye.jpg">
+            </div>
+          </div>
+        </div>     
+      </div>
+    </div>
+    <!-- start right col-4 holding wins/losses & total score of all games-->
+    <div class="col-12 col-md-4">
+      <div class="row">
+        <div class="col-12 col-md-12">
+          <p id=wins>
+            <!-- wins score will go here -->
+            Wins:
+          </p>
+          <p id="losses">
+            <!-- losses score will go here -->
+            Losses:
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-12">
+          <p id="totalScore">
+            <!-- total score of all games goes here -->
+            Total Score:
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-12">
+          <div class="row">
+            <!-- new game and new round butons will appear here -->
+            <button type="button" class="btn btn-primary" id="buttonStart">
+              Start Game
+            </button>
+          </div>
+          <div class="row">
+            <!-- reset button goes here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
