@@ -58,7 +58,7 @@ $(document).ready(function(){
 
   })
 // reset the game by pushing the reset button
-  $("#resetBtn").click(function(){
+  $(document).on("click", "#resetBtn", function(){
     
     wins = 0;
     losses = 0;
@@ -81,6 +81,21 @@ $(document).ready(function(){
     }
 
   });
+// creating new round btn
+  $(document).on("click", "#newRoundBtn", function(){
+    currentScore = 0;
+    targetScore = Math.floor(Math.random()*101+19)
+
+    $("#currentScore").text(currentScore);
+    $("#targetScore").text(targetScore);
+
+    imageNum = [];
+    // generating the numbers for the cat images
+    for (i=0; i < 4; i++){
+      var ranNum = Math.floor(Math.random()*11+1);
+      imageNum.push(ranNum);
+    }
+  });
 // game play
 // cat images add to to the current score
   $image0.click(function(){
@@ -89,6 +104,20 @@ $(document).ready(function(){
 
     currentScore = cat0 + currentScore;
     $("#currentScore").text(currentScore);
+
+    if (currentScore === targetScore){
+      alert("You win!")
+      totalScore = totalScore + currentScore;
+      wins = wins + 1;
+      $("#currentScore").text(currentScore);
+      $("#wins").text(wins);
+    }
+    else if (currentScore > targetScore){
+      alert("You lose :(");
+      losses = losses + 1;
+      $("#losses").text(losses);
+      
+    }
   });
 
   $image1.click(function(){
@@ -97,6 +126,22 @@ $(document).ready(function(){
 
     currentScore = cat1 + currentScore;
     $("#currentScore").text(currentScore);
+
+    // win conditions
+
+    if (currentScore === targetScore){
+      alert("You win!")
+      totalScore = totalScore + currentScore;
+      wins = wins + 1;
+      $("#currentScore").text(currentScore);
+      $("#wins").text(wins);
+    }
+    else if (currentScore > targetScore){
+      alert("You lose :(");
+      losses = losses + 1;
+      $("#losses").text(losses);
+      
+    }
   });
 
   $image2.click(function(){
@@ -105,6 +150,22 @@ $(document).ready(function(){
 
     currentScore = cat2 + currentScore;
     $("#currentScore").text(currentScore);
+
+    // win conditions
+
+    if (currentScore === targetScore){
+      alert("You win!")
+      totalScore = totalScore + currentScore;
+      wins = wins + 1;
+      $("#currentScore").text(currentScore);
+      $("#wins").text(wins);
+    }
+    else if (currentScore > targetScore){
+      alert("You lose :(");
+      losses = losses + 1;
+      $("#losses").text(losses);
+      
+    }
   });
 
   $image3.click(function(){
@@ -113,8 +174,21 @@ $(document).ready(function(){
 
     currentScore = cat3 + currentScore;
     $("#currentScore").text(currentScore);
+
+    // win conditions
+
+  if (currentScore === targetScore){
+    alert("You win!")
+    totalScore = totalScore + currentScore;
+    wins = wins + 1;
+    $("#currentScore").text(currentScore);
+    $("#wins").text(wins);
+  }
+  else if (currentScore > targetScore){
+    alert("You lose :(");
+    losses = losses + 1;
+    $("#losses").text(losses);
+    
+  }
   });
-
-  
-
 })
