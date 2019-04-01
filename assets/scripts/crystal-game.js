@@ -1,51 +1,63 @@
-// $(document).ready(function(){
-  // variables needed: losses, wins, accumulated score, score, target number
-  // arrays: random scores for the image choices
-
-  var targetNumber;
-  var losses;
+$(document).ready(function(){
   var wins;
-  var accumulatedScore;
+  var losses;
+  var targetScore;
+  var currentScore;
+  var imageNum = [];
+  var totalScore;
+  
 
-  var imageScores = [];
-
-  // Start game button
+// functions for the start game button
   $("#buttonStart").click(function(){
-    // generates the random numbers for the cats
+    imageNum = [];
+    // generating the numbers for the cat images
     for (i=0; i < 4; i++){
-      var ranNum = Math.floor(Math.random()*12)
-      imageScores.push(ranNum);
-      console.log(ranNum);
+      var ranNum = Math.floor(Math.random()*12);
+      imageNum.push(ranNum);
+
     }
+
+    wins = 0;
+    losses = 0;
+    currentScore = 0;
+    totalScore = 0;
+    targetScore = Math.floor(Math.random()*101+19)
+    console.log(imageNum)
+    console.log(`the target score generated ${targetScore}`)
+    $("#wins").text(wins);
+    $("#losses").text(losses);
+    $("#totalScore").text(totalScore);
+    $("#currentScore").text(currentScore);
+    $("#targetScore").text(targetScore);
+    // clearing the original start game button
+    $("#startGameArea").empty();
+    var $newRoundBtn = $("<button>");
+    // creating the new round button
+    $newRoundBtn.addClass("btn btn-primary");
+    $newRoundBtn.attr("id", "newRoundBtn");
+    $newRoundBtn.text("NewRound");
+    $("#startGameArea").append($newRoundBtn);
+
+    // creating reset game button
+    var $resetBtn = $("<button>")
+    $resetBtn.addClass("btn btn-primary");
+    $resetBtn.attr("id", "resetBtn");
+    $resetBtn.text("Reset Game");
+    $("#startGameArea").append($resetBtn);
+
+    $("#image0").attr("data-num", imageNum[0]);
+    $("#image1").attr("data-num", imageNum[1]);
+    $("#image2").attr("data-num", imageNum[2]);
+    $("#image3").attr("data-num", imageNum[3]);
+
+    var catNum = parseInt;
+    console.log(`this is catNum ${catNum}`)
+  })
+
+// game play
+
+  $("#image0").click(function(){
+    currentScore = currentScore + catA;
+    $("#currentScore").text(currentScore);
   });
-
-    console.log(imageScores)
-    // generates a random goal number to reach
-    // reset total score to 0
-    // reset wins/losses to 0
-    // this button gets placed by the new round button and generates the reset button
- 
-
-//  cat images 
-  $(".catChoice").click(function(){
-    // need a random number generated
-    // need an on-click function that adds their invisible score to the total game score
-  });
-
-
-
-
-
-// new round button
-
-
-  // generates random number for cats (1-12)
-  // generates goal number (19-120)
-
-// win conditions
-  // player wins when the score matches the goal number
-
-// loss conditions
-  // player loses if the score goes over the goal number
-
-// });
+})

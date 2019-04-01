@@ -49,10 +49,15 @@
                 <!-- right col-9 in row 1 left col -->
               <div class="col-9 col-md-9">
                 <div class="container">
-                  <p class="display-3">
-                    <!-- current score -->
-                    SCORE
+                  <p>
+                    <!-- target score -->
+                    Target Number:<span id="targetScore"></span>
                   </p>
+                  <p>
+                    <!-- current score -->
+                    Current Score:<span id="currentScore"></span>
+                  </p>
+                  
                 </div>
               </div>
             </div>
@@ -62,25 +67,25 @@
           <div class="col-3 col-md-3">
             <!-- image 1 -->
               <div class="container choiceImage">
-                <img class="catChoice" src="assets/images/brown-white-cat-profile.jpg">
+                <img id="image0" class="catChoice" src="assets/images/brown-white-cat-profile.jpg">
               </div>
           </div>
           <div class="col-3 col-md-3">
             <!-- image 2 -->
             <div class="container choiceImage">
-              <img class="catChoice" src="assets/images/grey-tabby-kitten.jpg">
+              <img id="image1" class="catChoice" src="assets/images/grey-tabby-kitten.jpg">
             </div>
           </div>
           <div class="col-3 col-md-3">
             <!-- image 3 -->
             <div class="container choiceImage">
-              <img class="catChoice" src="assets/images/grey-whie-cat-profile.jpg">
+              <img id="image2" class="catChoice" src="assets/images/grey-whie-cat-profile.jpg">
             </div> 
           </div>
           <div class="col-3 col-md-3">
             <!-- image 4 -->
             <div class="container choiceImage">
-              <img class="catChoice" src="assets/images/multi-color-cat-eye.jpg">
+              <img id="image3" class="catChoice" src="assets/images/multi-color-cat-eye.jpg">
             </div>
           </div>
         </div>     
@@ -90,21 +95,21 @@
     <div class="col-12 col-md-4">
       <div class="row">
         <div class="col-12 col-md-12">
-          <p id=wins>
+          <p>
             <!-- wins score will go here -->
-            Wins:
+            Wins: <span id=wins></span>
           </p>
-          <p id="losses">
+          <p>
             <!-- losses score will go here -->
-            Losses:
+            Losses: <span id="losses"></span>
           </p>
         </div>
       </div>
       <div class="row">
         <div class="col-12 col-md-12">
-          <p id="totalScore">
+          <p>
             <!-- total score of all games goes here -->
-            Total Score:
+            Total Score: <span id="totalScore"></span>
           </p>
         </div>
       </div>
@@ -112,9 +117,11 @@
         <div class="col-12 col-md-12">
           <div class="row">
             <!-- new game and new round butons will appear here -->
-            <button type="button" id="buttonStart" class="btn btn-primary">
-              Start Game
-            </button>
+            <div id="startGameArea">
+              <button type="button" id="buttonStart" class="btn btn-primary">
+                Start Game
+              </button>
+            </div>
           </div>
           <div class="row">
             <!-- reset button goes here -->
