@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Crazy Cat Lady</title>
+</head>
+<body>
+  <!-- Jumbotron with the game name -->
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Fluid jumbotron</h1>
+      <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+    <!-- left column to hold the images and current score and target number -->
+      <div class="col-12 col-md-8">
+        <div class="row">
+          <div class="col-6 col-md-6">
+            <!-- card with current cat image -->
+            <div class="card">
+              <img src="..." id="cat-image" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-6">
+            <!-- card with the target number and current score -->
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Stats</h5>
+                <p class="card-text">Target Number:<span id="targetScore"></span></p>
+                <p class="card-text">Current Score:<span id="currentScore"></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <!-- image cards -->
+            <div class="col-12 col-md-3">
+              <div class="card">
+                <img id="image0" src="assets/images/brown-white-cat-profile.jpg" class="card-img-top imageChoice" alt="...">
+              </div>
+            </div>
+            <div class="col-12 col-md-3">
+              <div class="card">
+                <img id="image1" src="assets/images/grey-tabby-kitten.jpg" class="card-img-top imageChoice" alt="...">
+              </div>
+            </div>
+            <div class="col-12 col-md-3">
+              <div class="card">
+                <img id="image2" src="assets/images/blue-eye-cat.jpg" class="card-img-top imageChoice" alt="...">
+              </div>
+            </div>
+            <div class="col-12 col-md-3">
+              <div class="card" style="width: 18rem;">
+                <img id="image3" src="assets/images/green-eye-cat.jpg" class="card-img-top imageChoice" alt="...">
+              </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- right column to hold the total wins/losses, total score, and buttons -->
+      <div class="col-12 col-md-4">
+        <!-- card to hold Wins, losses, total score, and buttons -->
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Game Stats</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Have you achieved Crazy Cat Lady?</h6>
+            <p class="card-text"><span id="wins"></span></p>
+            <p class="card-text"><span id="losses"></span></p>
+            <p class="card-text"><span id="totalScore"></span></p>
+            <div id="startGameArea">
+              <button id="buttonStart" type="button" class="btn btn-outline-primary">Start Game</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="assets/scripts/crystal-game.js"></script>
+</body>
+</html>

@@ -39,14 +39,14 @@ $(document).ready(function(){
     $("#startGameArea").empty();
     var $newRoundBtn = $("<button>");
     // creating the new round button
-    $newRoundBtn.addClass("btn btn-primary");
+    $newRoundBtn.addClass("btn btn-outline-primary");
     $newRoundBtn.attr("id", "newRoundBtn");
     $newRoundBtn.text("NewRound");
     $("#startGameArea").append($newRoundBtn);
 
     // creating reset game button
     var $resetBtn = $("<button>")
-    $resetBtn.addClass("btn btn-primary");
+    $resetBtn.addClass("btn btn-outline-primary");
     $resetBtn.attr("id", "resetBtn");
     $resetBtn.text("Reset Game");
     $("#startGameArea").append($resetBtn);
@@ -111,6 +111,11 @@ $(document).ready(function(){
 
     currentScore = cat0 + currentScore;
     $("#currentScore").text(currentScore);
+    
+    // retrieve src of cat photo
+    var catPhoto = $(this).attr("src");
+    // write catPhoto in as "src" attribute for cat-image
+    $("#cat-image").attr("src", catPhoto);
 
     if (currentScore === targetScore){
       alert("You win!")
@@ -134,6 +139,11 @@ $(document).ready(function(){
     if (gamePlay === false) {
       return false;
     }
+
+    // retrieve src of cat photo
+    var catPhoto = $(this).attr("src");
+    // write catPhoto in as "src" attribute for cat-image
+    $("#cat-image").attr("src", catPhoto);
 
     var cat1 = parseInt($(this).attr("data-num"));
     console.log(`this is cat1 ${cat1}`);
@@ -165,12 +175,19 @@ $(document).ready(function(){
     if (gamePlay === false) {
       return false;
     }
+
+    // retrieve src of cat photo
+    var catPhoto = $(this).attr("src");
+    // write catPhoto in as "src" attribute for cat-image
+    $("#cat-image").attr("src", catPhoto);
+
     var cat2 = parseInt($(this).attr("data-num"));
     console.log(`this is cat2 ${cat2}`);
 
     currentScore = cat2 + currentScore;
     $("#currentScore").text(currentScore);
 
+    
     // win conditions
 
     if (currentScore === targetScore){
@@ -196,6 +213,11 @@ $(document).ready(function(){
       return false;
     }
 
+    // retrieve src of cat photo
+    var catPhoto = $(this).attr("src");
+    // write catPhoto in as "src" attribute for cat-image
+    $("#cat-image").attr("src", catPhoto);
+    
     var cat3 = parseInt($(this).attr("data-num"));
     console.log(`this is cat3 ${cat3}`);
 
